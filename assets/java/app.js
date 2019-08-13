@@ -53,8 +53,8 @@ function displayHeroInfo() {
                         if (state === "animate") {
                             event.target.setAttribute("src", results[i].images.fixed_height_still.url);
                             event.target.setAttribute("data-state", "still");
-                        } else {
-                            event.target.setAttribute("src", results[i].images.fixed_height_still.url);
+                        } else if (state === "still") {
+                            event.target.setAttribute("src", results[i].images.fixed_height.url);
                             event.target.setAttribute("data-state", "animate");
                         }
                     })
