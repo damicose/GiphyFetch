@@ -1,6 +1,6 @@
 let queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=b7NVjCWm7hvalev6T5ZVweXLvFUYFTAp";
 
-const heroes = ["Wolverine", "Hulk", "The Flash"];
+const heroes = ["Wolverine", "Hulk", "The Flash", "Mr. Incredible"];
 
 function displayHeroInfo() {
 
@@ -21,19 +21,22 @@ function displayHeroInfo() {
 
                 if (results[i].rating === "g" || results[i].rating === "pg") {
                     const gifDiv = document.createElement("div");
+                    gifDiv.setAttribute("class", "jumbotron col border-danger border text-center m-3")
 
                     const rating = results[i].rating;
 
                     const p = document.createElement("p");
-                    p.innerHTML = "Rating: " + rating;
+                    p.innerHTML = "<hr>" + "Rating: " + rating;
+                    p.setAttribute("style", "font-size: 20px; font-weight: bold; text-transform: uppercase");
 
                     const heroImage = document.createElement("img");
                     heroImage.classList.add(".gif");
                     heroImage.setAttribute("data-state", "animate");
                     heroImage.setAttribute("src", results[i].images.fixed_height.url);
-
-                    gifDiv.append(p);
+                   
                     gifDiv.append(heroImage);
+                    gifDiv.append(p);
+
 
 
                     document.getElementById("gifs-appear-here").prepend(gifDiv);
@@ -66,6 +69,7 @@ function renderButtons() {
         const a = document.createElement("button");
         a.classList.add("hero");
         a.setAttribute("data-name", heroes[i]);
+        a.setAttribute("class", "btn m-2 btn-danger")
         a.innerHTML = heroes[i];
         document.getElementById("buttons-view").append(a);
 

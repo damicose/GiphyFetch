@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GiphyFetch</title>
+    <title>Giphy - SSS</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,26 +13,46 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Superhero Search</h1>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col jumbotron border-danger border">
+            <h1 class="text-center">Sean's Superhero Search</h1>
+        </div>
+        <div class="col"></div>
     </div>
 
-    <div class="container">
-        <div id="buttons-view"></div>
+    <hr>
+
+    <div class="row">
+            <div class="col text-center"></div>
+        <div class="container col text-center jumbotron border-danger border">
+            <div id="buttons-view"></div>
+        </div>
+        <div class="col"></div>
     </div>
 
-    <div class="container">
-        <form id="hero-form">
-            <label for="hero-input">Add Your Own Hero</label>
-            <input type="text" id="hero-input">
-            <br>
+    <br>
 
-            <input id="add-hero" type="submit" value="Add Your Own Hero">
-        </form>
+    <div class="row">
+            <div class="col text-center"></div>
+        <div class="container col text-center jumbotron border-danger border">
+            <form id="hero-form">
+                <label for="hero-input">Add Your Own Hero: </label>
+                <input type="text" id="hero-input">
+
+
+                <input class="btn btn-danger m-1" id="add-hero" type="submit" value="SUBMIT">
+            </form>
+        </div>
+        <div class="col"></div>
     </div>
 
-    <div class="container" id="gifs-appear-here"></div>
-    <script src="assets/java/app.js"></script>
+<div class="row">
+    <div class="col"></div>
+    <div class="container col" id="gifs-appear-here"></div>
+    <div class="col"></div>
+</div>
+<script src="assets/java/app.js"></script>
 </body>
 
 </html>
